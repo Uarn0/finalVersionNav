@@ -15,7 +15,7 @@ import com.example.cursova.model.transport.ITransport
 import com.example.cursova.model.transport.Minibus
 import com.example.cursova.model.transport.Motorcycle
 
-class MyAdapter : RecyclerView.Adapter<MyAdapter.BossOfTheHolder>() {
+class AdapterForTransport : RecyclerView.Adapter<AdapterForTransport.BossOfTheHolder>() {
     interface OnTransportClickListener {
         fun onTransportClick(transport: ITransport)
         fun onEditClick(transport: ITransport)

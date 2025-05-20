@@ -20,7 +20,7 @@
 
     <fragment
         android:id="@+id/navigation_add_transport"
-        android:name="com.example.cursova.ui.dashboard.AddTransportFragment"
+        android:name="com.example.cursova.ui.addT.AddTransportFragment"
         android:label="Adding transport"
         tools:layout="@layout/fragment_add_transport" >
         <action
@@ -30,7 +30,7 @@
 
     <fragment
         android:id="@+id/navigation_list_event"
-        android:name="com.example.cursova.ui.notifications.EventHomeFragment"
+        android:name="com.example.cursova.ui.element.EventHomeFragment"
         android:label="List of event"
         tools:layout="@layout/fragment_second_home">
         <argument
@@ -42,5 +42,12 @@
         <argument
             android:name="transportImageRes"
             app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_add_event"
+        android:name="com.example.cursova.ui.event.AddEventFragment"
+        android:label="Add event"
+        tools:layout="@layout/fragment_add_event">
     </fragment>
 </navigation>

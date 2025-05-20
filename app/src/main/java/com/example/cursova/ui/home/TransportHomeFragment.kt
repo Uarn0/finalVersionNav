@@ -10,7 +10,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.cursova.R
 import com.example.cursova.SharedViewModelTransport
-import com.example.cursova.adapter.MyAdapter
+import com.example.cursova.adapter.AdapterForTransport
 import com.example.cursova.databinding.FragmentHomeBinding
 import com.example.cursova.model.transport.ITransport
 
@@ -32,14 +32,14 @@ class TransportHomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val customAdapter = MyAdapter()
+        val customAdapter = AdapterForTransport()
         binding.recycleViewTransports.layoutManager = LinearLayoutManager(requireContext())
         binding.recycleViewTransports.adapter = customAdapter
 
         sharedViewModel.transportList.observe(viewLifecycleOwner) { transportList ->
             customAdapter.updateList(transportList)
         }
-        customAdapter.setOnTransportClickListener(object : MyAdapter.OnTransportClickListener {
+        customAdapter.setOnTransportClickListener(object : AdapterForTransport.OnTransportClickListener {
             override fun onTransportClick(transport: ITransport) {
                 val bundle = Bundle().apply {
                     putString("transportName", transport.getName())

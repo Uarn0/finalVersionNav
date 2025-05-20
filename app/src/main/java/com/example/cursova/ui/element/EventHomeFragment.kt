@@ -1,17 +1,21 @@
-package com.example.cursova.ui.notifications
+package com.example.cursova.ui.element
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import com.example.cursova.databinding.FragmentSecondHomeBinding
 import com.example.cursova.R
+import com.example.cursova.SharedViewModelEvent
+import kotlin.getValue
 
 class EventHomeFragment : Fragment() {
 
     private var _binding: FragmentSecondHomeBinding? = null
     private val binding get() = _binding!!
+    private val sharedViewModel: SharedViewModelEvent by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -31,6 +35,7 @@ class EventHomeFragment : Fragment() {
         binding.transportType.text = type
         binding.icon.setImageResource(imageRes ?: R.drawable.ic_car)
     }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null

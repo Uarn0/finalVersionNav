@@ -1,4 +1,4 @@
-package com.example.cursova.ui.dashboard
+package com.example.cursova.ui.addT
 
 import android.os.Bundle
 import android.view.LayoutInflater
