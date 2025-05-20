@@ -42,12 +42,16 @@
         <argument
             android:name="transportImageRes"
             app:argType="integer" />
+        <action
+            android:id="@+id/action_navigation_list_event_to_navigation_add_event"
+            app:destination="@id/navigation_add_event" />
     </fragment>
 
     <fragment
         android:id="@+id/navigation_add_event"
-        android:name="com.example.cursova.ui.event.AddEventFragment"
+        android:name="com.example.cursova.ui.addE.AddEventFragment"
         android:label="Add event"
         tools:layout="@layout/fragment_add_event">
     </fragment>
+
 </navigation>

@@ -11,4 +11,9 @@
     <string name="save_info_about_transport">Save info about transport</string>
     <string name="name_of_the_item_transport">Name of transport</string>
     <string name="type_transport">Type of transport</string>
+    <string name="save_info_about_event">Save info about event</string>
+    <string name="service">Service</string>
+    <string name="trip">Trip</string>
+    <string name="repair">Repair</string>
+    <string name="choose_type_of_event">Choose type of event</string>
 </resources>
