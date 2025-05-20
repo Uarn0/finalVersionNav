@@ -11,7 +11,7 @@ data class TripEvent(
         val sdf = java.text.SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
         return sdf.format(java.util.Date(createdAt))
     }
-
+    override fun getName() = "Trip"
     override fun getEventType(): Int {
         return IEvent.TRIP_EVENT_TYPE
     }

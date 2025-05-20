@@ -11,6 +11,8 @@ data class RepairEvent(
         val sdf = java.text.SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
         return sdf.format(java.util.Date(createdAt))
     }
+    override fun getName() = "Repair"
+
     override fun getEventType(): Int {
         return IEvent.REPAIR_EVENT_TYPE
     }

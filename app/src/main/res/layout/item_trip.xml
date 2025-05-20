@@ -10,7 +10,6 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/editButton"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginEnd="8dp">
@@ -29,17 +28,6 @@
             android:layout_height="wrap_content"
             android:text="time"/>
     </LinearLayout>
-
-    <Button
-        android:id="@+id/editButton"
-        android:layout_width="70dp"
-        android:layout_height="wrap_content"
-        android:text="Edit"
-        app:layout_constraintStart_toEndOf="@id/textContainer"
-        app:layout_constraintEnd_toStartOf="@id/removeButton"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginEnd="8dp"/>
 
     <Button
         android:id="@+id/removeButton"

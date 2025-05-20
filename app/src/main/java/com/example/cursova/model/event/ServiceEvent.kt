@@ -11,7 +11,7 @@ data class ServiceEvent(
         val sdf = java.text.SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
         return sdf.format(java.util.Date(createdAt))
     }
-
+    override fun getName() = "Service"
     override fun getEventType(): Int = IEvent.SERVICE_EVENT_TYPE
 }
 

@@ -41,7 +41,7 @@
     </LinearLayout>
     <androidx.recyclerview.widget.RecyclerView
         android:layout_marginTop="110dp"
-        android:id="@+id/recycleViewTransports"
+        android:id="@+id/recycleViewEvent"
         android:layout_width="0dp"
         android:layout_height="530dp"
         android:scrollbarAlwaysDrawVerticalTrack="true"

@@ -52,6 +52,14 @@
         android:name="com.example.cursova.ui.addE.AddEventFragment"
         android:label="Add event"
         tools:layout="@layout/fragment_add_event">
+        <argument
+            android:name="transportName"
+            app:argType="string" />
+        <argument
+            android:name="transportType"
+            app:argType="string" />
+        <argument
+            android:name="transportImageRes"
+            app:argType="integer" />
     </fragment>
-
 </navigation>
