@@ -17,24 +17,24 @@ import com.example.cursova.model.transport.Motorcycle
 
 class AdapterForTransport : RecyclerView.Adapter<AdapterForTransport.BossOfTheHolder>() {
     interface OnTransportClickListener {
-        fun onTransportClick(transport: ITransport)
-        fun onEditClick(transport: ITransport)
+        fun onTransportClick(ITransport: ITransport)
+        fun onEditClick(ITransport: ITransport)
     }
-    private var transportList = mutableListOf<ITransport>()
+    private var ITransportList = mutableListOf<ITransport>()
 
     override fun getItemViewType(position: Int): Int {
-        return transportList[position].getTransportType()
+        return ITransportList[position].getTransportType()
     }
 
     @SuppressLint("NotifyDataSetChanged")
     fun updateList(newList: MutableList<ITransport>){
-        transportList = newList
+        ITransportList = newList
         notifyDataSetChanged()
     }
 
     private fun removeItemAt(position: Int) {
-        val removedItem = transportList[position]
-        transportList.removeAt(position)
+        val removedItem = ITransportList[position]
+        ITransportList.removeAt(position)
         notifyItemRemoved(position)
         onItemRemoved?.invoke(removedItem)
     }
@@ -44,7 +44,7 @@ class AdapterForTransport : RecyclerView.Adapter<AdapterForTransport.BossOfTheHo
         this.transportClickListener = listener
     }
     override fun onBindViewHolder(holder: BossOfTheHolder, position: Int) {
-        val item = transportList[position]
+        val item = ITransportList[position]
         holder.bind(item)
 
         holder.itemView.setOnClickListener {
@@ -83,7 +83,7 @@ class AdapterForTransport : RecyclerView.Adapter<AdapterForTransport.BossOfTheHo
         abstract fun bind(item: ITransport)
     }
 
-    override fun getItemCount(): Int = transportList.size
+    override fun getItemCount(): Int = ITransportList.size
 
     class CarViewHolder(private val itemViewBinding: ItemCarBinding) : BossOfTheHolder(itemViewBinding){
         override fun bind (item: ITransport){

@@ -1,6 +1,7 @@
 package com.example.cursova.model.event
-
+import com.squareup.moshi.JsonClass
 import android.annotation.SuppressLint
+@JsonClass(generateAdapter = true)
 
 data class RepairEvent(
     val repair : String,

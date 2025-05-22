@@ -16,4 +16,6 @@
     <string name="trip">Trip</string>
     <string name="repair">Repair</string>
     <string name="choose_type_of_event">Choose type of event</string>
+    <string name="add_event">Add event</string>
+    <string name="add_vehicle">Add Vehicle</string>
 </resources>

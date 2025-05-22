@@ -33,14 +33,9 @@
         android:name="com.example.cursova.ui.element.EventHomeFragment"
         android:label="List of event"
         tools:layout="@layout/fragment_second_home">
+
         <argument
-            android:name="transportName"
-            app:argType="string" />
-        <argument
-            android:name="transportType"
-            app:argType="string" />
-        <argument
-            android:name="transportImageRes"
+            android:name="transportIndex"
             app:argType="integer" />
         <action
             android:id="@+id/action_navigation_list_event_to_navigation_add_event"
@@ -53,13 +48,11 @@
         android:label="Add event"
         tools:layout="@layout/fragment_add_event">
         <argument
-            android:name="transportName"
-            app:argType="string" />
-        <argument
-            android:name="transportType"
-            app:argType="string" />
-        <argument
-            android:name="transportImageRes"
+            android:name="transportIndex"
             app:argType="integer" />
+        <action
+            android:id="@+id/action_navigation_add_event_to_navigation_list_event3"
+            app:destination="@id/navigation_list_event" />
     </fragment>
+
 </navigation>

@@ -1,6 +1,8 @@
 package com.example.cursova.model.transport
+import com.squareup.moshi.JsonClass
 
-interface ITransport {
+@JsonClass(generateAdapter = true, generator = "sealed:type")
+sealed interface ITransport {
     fun getTransportType():Int
     fun getTransportTypeName(): String
     fun getName(): String

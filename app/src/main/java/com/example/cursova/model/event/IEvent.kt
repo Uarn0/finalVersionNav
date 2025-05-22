@@ -1,5 +1,7 @@
 package com.example.cursova.model.event
+import com.squareup.moshi.JsonClass
 
+@JsonClass(generateAdapter = true, generator = "sealed:type")
 interface IEvent {
     fun getEventType(): Int
     fun getEventTime(): String

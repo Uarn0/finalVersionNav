@@ -1,7 +1,9 @@
 package com.example.cursova.model.event
 
 import android.annotation.SuppressLint
+import com.squareup.moshi.JsonClass
 
+@JsonClass(generateAdapter = true)
 data class TripEvent(
     val trip : String,
     val createdAt: Long = System.currentTimeMillis()

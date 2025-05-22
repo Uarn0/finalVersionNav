@@ -14,7 +14,6 @@ import com.example.cursova.model.event.IEvent
 import com.example.cursova.model.event.RepairEvent
 import com.example.cursova.model.event.ServiceEvent
 import com.example.cursova.model.event.TripEvent
-import com.example.cursova.model.transport.ITransport
 
 class AdapterForEvent : RecyclerView.Adapter<AdapterForEvent.BossOfTheHolder>() {
 

@@ -1,26 +1,25 @@
 package com.example.cursova.ui.addT
 
+import com.example.cursova.model.TransportWithEvents
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.cursova.R
-import com.example.cursova.SharedViewModelTransport
 import com.example.cursova.databinding.FragmentAddTransportBinding
 import com.example.cursova.model.transport.Car
 import com.example.cursova.model.transport.ITransport
 import com.example.cursova.model.transport.Minibus
 import com.example.cursova.model.transport.Motorcycle
+import com.example.cursova.storage.JsonStorage
 
 class AddTransportFragment : Fragment() {
 
     private var _binding: FragmentAddTransportBinding? = null
     private val binding get() = _binding!!
-    private val sharedViewModel: SharedViewModelTransport by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -46,14 +45,16 @@ class AddTransportFragment : Fragment() {
                 return@setOnClickListener
             }
 
-            val transport: ITransport = when (selectedRadioButtonId) {
+            val ITransport: ITransport = when (selectedRadioButtonId) {
                 R.id.car -> Car(name)
                 R.id.minibus -> Minibus(name)
                 R.id.motorcycle -> Motorcycle(name)
                 else -> throw IllegalArgumentException("Невідомий тип транспорту")
             }
+            val list = JsonStorage.load(requireContext())
+            list.add(TransportWithEvents(ITransport, mutableListOf()))
+            JsonStorage.save(requireContext(), list)
 
-            sharedViewModel.addTransport(transport)
             findNavController().navigate(R.id.navigation_list_transport)
         }
     }
